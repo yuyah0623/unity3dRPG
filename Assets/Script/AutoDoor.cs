@@ -15,13 +15,13 @@ public class AutoDoor : MonoBehaviour {
 	}
 
 	void OnTriggerEnter (Collider other) {
-		if (other.name == "ThirdPersonController") {
+		if (other.name == "Player") {
 			anim.SetBool ("IsOpen", true);
 		}
 	}
 		
 	void OnTriggerExit(Collider other) {
-		if (other.name == "ThirdPersonController") {
+		if (other.name == "Player") {
 			anim.SetBool ("IsOpen", false);
 		}
 	}
