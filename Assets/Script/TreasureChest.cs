@@ -17,6 +17,9 @@ public class TreasureChest : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		if(other.name == "Player") {
 			anim.SetBool ("IsOpen", true);
+			GameObject effectObj = Resources.Load<GameObject> ("Effects/ItemEffect");
+			GameObject effect = (GameObject)Instantiate(effectObj, gameObject.transform.position, effectObj.transform.rotation);
+			effect.transform.parent = gameObject.transform; 
 		}
 	}
 
