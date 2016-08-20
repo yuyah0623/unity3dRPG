@@ -22,5 +22,4 @@ public class TreasureChest : MonoBehaviour {
 			effect.transform.parent = gameObject.transform; 
 		}
 	}
-
 }
