@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Inventry :MonoBehaviour {
+public class Inventory :MonoBehaviour {
 	List<int> itemList = new List<int>();
 	public void AddItem(Item.itemType type) {
 		itemList.Add ((int)type);

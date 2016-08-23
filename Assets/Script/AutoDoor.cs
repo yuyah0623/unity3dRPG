@@ -4,7 +4,7 @@ using System.Collections;
 public class AutoDoor : MonoBehaviour {
 
 	Animator anim;
-	Inventry inventry = new Inventry();
+
 	public bool conditionNeedItem = false;
 	// Use this for initialization
 	void Start () {
@@ -21,7 +21,7 @@ public class AutoDoor : MonoBehaviour {
 			if (conditionNeedItem == false) {
 				anim.SetBool ("IsOpen", true);
 			} else {
-				if (inventry.HasItem ()) {
+				if (GameManager.instance.inventory.HasItem()) {
 					anim.SetBool ("IsOpen", true);
 				}
 			}
